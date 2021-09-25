@@ -11,10 +11,14 @@ else:
         salaire=input('Saisissez votre salaire:')
         try:
             float(salaire)
-            ecart = float(salaire)*0.23
-            net = float(salaire) - ecart
-            net = str(net)
-            print("Votre salaire sera d'environ " + net + ' euros net.' )
+            ecartNonCadre = float(salaire)*0.22
+            netNonCadre = float(salaire) - ecartNonCadre
+            netNonCadre = str(netNonCadre)
+            ecartCadre = float(salaire)*0.25
+            netCadre = float(salaire) - ecartCadre
+            netCadre = str(netCadre)
+            print("Votre salaire sera d'environ " + netNonCadre + " euros net si vous n'êtes pas cadre." )
+            print("Votre salaire sera d'environ " + netCadre + " euros net si vous êtes cadre." )
         except ValueError:
             print("Ce n'est pas un nombre!")
 
@@ -22,13 +26,14 @@ else:
         salaire=input('Saisissez votre salaire:')
         try:
             float(salaire)
-            ecart = float(salaire)*0.23
-            net = float(salaire) + ecart
-            net = str(net)
-            print("Votre salaire sera d'environ " + net + ' euros brut.' )
+            brutNonCadre = float(salaire)/0.78
+            brutNonCadre = str(brutNonCadre)
+            brutCadre = float(salaire)/0.75
+            brutCadre = str(brutCadre)
+            print("Votre salaire sera d'environ " + brutNonCadre + " euros net si vous n'êtes pas cadre." )
+            print("Votre salaire sera d'environ " + brutCadre + " euros net si vous êtes cadre." )
         except ValueError:
-            print("Ce n'est pas un nombre!")                    
-    
+            print("Ce n'est pas un nombre!")        
 
 
 
